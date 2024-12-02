@@ -42,7 +42,7 @@
 % - korean: 한글논문 | english: 영문논문
 % - final : 최종판   | draft  : 시험판
 % - pdfdoc : 선택하지 않으면 북마크와 colorlink를 만들지 않습니다.(Generate bookmark and colorlink if enabled)
-\documentclass[master,english,draft]{postech-ucs}
+\documentclass[master,english,final]{postech-ucs}
 %\documentclass[master,english,final]{postech-ucs}
 % If you want make pdf document (include bookmark, colorlink)
 %\documentclass[doctor,english,final,pdfdoc]{postech-ucs}
@@ -59,6 +59,17 @@
 \usepackage{physics}
 \usepackage{anyfontsize}
 \usepackage{lipsum}
+\usepackage{amsfonts}
+\usepackage{wrapfig}
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{placeins}
+\usepackage{subcaption}
+
 % \usepackage{bbm}
 % \renewcommand{\thealgorithm}{}
 \newcommand{\argmax}{\operatornamewithlimits{arg\,max}}
@@ -96,8 +107,7 @@
 % @usage   \advisor[options]{...한글이름...}{...영문이름...}{signed|nosign}
 % @options [default: major]
 % - major: 주 지도교수  | coopr: 공동 지도교수
-\advisor[major]{홍 상 직}{Sangjik Hong}{nosign}
-\advisor[coopr]{옥 영 향}{Younghyang Ok}{nosign}
+\advisor[major]{김 원 화}{Won Hwa Kim}{nosign}
 %
 % 지도교수 한글이름은 입력하지 않아도 됩니다.
 % You may not input advisor's korean name
@@ -135,29 +145,27 @@
 % 박사논문의 경우는 학위종류를 입력하지 않아도 됩니다.
 % If you write Ph.D. dissertation, you cannot input degree field.
 
-\department{PH}{}
+\department{GSAI}{}
 
 % @command studentid 학번(ID)
-\studentid{20219999}
+\studentid{20232277}
 
 % @command referee 심사위원 (석사과정 3인, 박사과정 5인)
-\referee[1]{Sangjik Hong}
-\referee[2]{Younghyang Ok}
-\referee[3]{Sangjik Hong}
-\referee[4]{Younghyang Ok}
-\referee[5]{Sangjik Hong}
+\referee[1]{Won Hwa Kim}
+\referee[2]{Dongwoo Kim}
+\referee[3]{Sungsoo Ahn}
 % Of course english name is available
 
 % @command approvaldate 지도교수논문승인일
 % @param   year,month,day 연,월,일 순으로 입력
-\approvaldate{2021}{01}{31}
+\approvaldate{2024}{11}{27}
 
 % @command refereedate 심사위원논문심사일
 % @param   year,month,day 연,월,일 순으로 입력
-\refereedate{2021}{01}{31}
+\refereedate{2024}{11}{27}
 
 % @command gradyear 졸업년도
-\gradyear{2021}
+\gradyear{2025}
 
 % 본문 시작
 \begin{document}
@@ -168,14 +176,14 @@
 
     % 영문초록 (abstract)
     \begin{abstract}
-        \lipsum[1]
+        \input{abstract.tex}
     \end{abstract}
 
     % 목차 (Table of Contents) 생성
     \tableofcontents
 
     % 표목차 (List of Tables) 생성
-%    \listoftables
+    \listoftables
 
     % 그림목차 (List of Figures) 생성
     \listoffigures
@@ -189,10 +197,22 @@
 %% You cannot use 'part'
 
 \chapter{Introduction}
-\lipsum
+\input{introduction.tex}
 
-\chapter{Citation}
-It is a citation example~\cite{Moin1998}.
+\chapter{Background}
+\input{background.tex}
+
+\chapter{Method}
+\input{method.tex}
+
+\chapter{Related Works}
+\input{relatedworks.tex}
+
+\chapter{Experiment}
+\input{experiment.tex}
+
+\chapter{Conclusion}
+\input{conclusion.tex}
 
 %%
 %% 한글요약문 시작 (Korean summary)
@@ -200,7 +220,7 @@ It is a citation example~\cite{Moin1998}.
 %% Note. 영문논문일 경우에만 필요하니 한글논문의 경우에는 작성하지 마십시오.
 %%
 \begin{summarykorean}
-
+    \input{summarykorean.tex}
 \end{summarykorean}
 
 %%
@@ -230,29 +250,28 @@ It is a citation example~\cite{Moin1998}.
 % @command curriculumvitae 이력서
 % @options [default: 클래스 옵션 korean|english ]
 % - korean : 한글이력서 | english : 영문이력서
-\curriculumvitae[korean]
+\curriculumvitae[english]
 
     % @environment personaldata 개인정보
     % @command     name         이름
         % input data only you want
     \begin{personaldata}
-        \name       {Gil Dong Hong}
+        \name       {Yujee Song}
     \end{personaldata}
 
     % @environment education 학력
     % @options [default: (none)] - 수학기간을 입력
     \begin{education}
-%	\item[2013. 03.\ --\ 2021. 02.] Department of Physics, POSTECH (Ph.D.)
-%	\item[2009. 03.\ --\ 2013. 02.] Department of Physics, POSTECH (B.S.)
-	\item[2013. 03.\ --\ 2021. 02.] Department of Physics, Pohang University of Science and Technology (Ph.D.)
-	\item[2009. 03.\ --\ 2013. 02.] Department of Physics, Pohang University of Science and Technology (B.S.)
+	\item[2023. 02.\ --\ 2025. 02.] Graduate School of Artificial Intelligence, POSTECH (M.S.)
+	\item[2020. 03.\ --\ 2022. 02.] Computer Science \& Engineering, Chung-Ang University (B.S.)
+	\item[2015. 09.\ --\ 2017. 06.] Computer Science \& Engineering, UC Irvine (B.S.)
     \end{education}
 
     % @environment experience 경력
     % @options [default: (none)] - 해당기간을 입력
    \begin{experience}
-	\item[2016. 08.\ --\ 2019. 09.] Technical Research Personnel, Alternative military service
-	\item[2014. 03.\ --\ 2015. 09.] Developing endstation for spin-ARPES beamline in PAL beamline 4A2 (Institute for Basic Science)
+	\item[2024. 07.\ --\ 2024. 09.] Medical AI Research \& Development Intern, VUNO
+	\item[2023. 02.\ --\ 2025. 02.] Medical Information Processing Lab, Graduate School of Artificial Intelligence, POSTECH
    \end{experience}
 
     % @environment activity 학회활동

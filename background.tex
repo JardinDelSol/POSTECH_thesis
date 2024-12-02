@@ -1,0 +1,55 @@
+\section{Temporal Point Process (TPP)}
+Temporal Point Process is a stochastic process whose realization is a set of ordered times $\{t_i\}_{i=0}^N$.
+The observed events until time $t_i$ is denoted as a history $\mathcal{H}_{t_i}$. 
+The time of the next event, given $\mathcal{H}_{t_i}$, can be characterized using a pdf $f(t|\mathcal{H}_{t_i}) := f^*(t)$, which denotes a probability that a subsequent event occurs during the interval $[t, t+dt)$ conditioned on $\mathcal{H}_{t_i}$. 
+Its cumulative density function (cdf) is denoted as $F(t|\mathcal{H}_{t_i})$, and a survival function is denoted as $S(t|\mathcal{H}_{t_i}) = 1-F(t|\mathcal{H}_{t_i})$, where both are conditioned on $\mathcal{H}_{t_i}$.
+Throughout this paper, $*$ will be used to state that a function is conditioned on $\mathcal{H}_{t_i}$.
+
+It is often difficult to define a fixed functional form for $f^*(t)$ due to its unknown pattern and the constraint $\int _0 ^\infty f^*(s) ds = 1$.
+Therefore, an intensity function 
+$\lambda^*(t):= \frac{f^*(t)}{S^*(t)} = \frac{f^*(t)}{1-F^*(t)}$
+is often introduced for the characterization of the stochastic process  \cite{lec:tpp}. 
+The $\lambda^*(t) \geq 0$ being the only constraint, it has been commonly used to model a TPP with flexibility\cite{bib:hawkesOrigin, bib:nhp, bib:fully_neural, bib:NJSDE, bib:sahp, bib:THP, bib:STPP, bib:ANHP}.
+A conditional intensity function, $\lambda^*(t)$, utilizes observed events $\mathcal{H}_{t}$ to calculate the intensity at $t$, and $\lambda ^ * (t) dt = p(t_{i} \in [t, t+dt) | \mathcal{H}_{t})$.
+
+\subsection{Marked Temporal Point Process (MTPP)}
+Marked Temporal Point Process is a random process whose realization is a set of events $\mathcal{S} = \{e_i\}_{i = 0}^N$, where $e_i = (t_i, k_i)$. Here, the $k_i \in \{1, \ldots, K\}$ denotes a class of the event, i.e., a mark, and $t_i \in \mathbb{R}$ is the time of its occurrence with $t_i < t_{i+1}$. The entire sequence prior to time $t_i$ is denoted as the history $\mathcal{H}_{t_i} = \{(t_j, k_j) \in \mathcal{S} : t_j < t_i\}$. 
+The conditional intensity function $\lambda^*(t, k) := \lambda(t, k | \mathcal{H}_{t})$ for MTPP with a mark $k$ is often conveniently written as a product of ground intensity
+$\lambda_g ^* (t)$ and conditional intensity of marker $f ^*(k|t)$ given time as \cite{lec:tpp, lec:tpp_Rodriguez, bib:daley}: 
+\begin{equation}
+\begin{aligned}
+    \lambda ^* (t,k) &= \lambda_g ^* (t) f ^*(k|t) \\
+    &= {{f(t| \mathcal{H}_{t})f^*(k|t)} \over {1 - F(t | \mathcal{H}_{t})}} 
+    = {{f(t, k| \mathcal{H}_{t})} \over {1 - F(t | \mathcal{H}_{t})}}
+\end{aligned}
+\end{equation}
+
+where $f^*(t)$ is the probability 
+with respect to time, and $f^*(k|t)$ is the probability with respect to mark.
+Since $\lambda^*(t,k)$ can be expressed in two separate components $\lambda_g^*(t)$ and $f^*(k|t)$, the likelihood of the MTPP can be expressed as follows \cite{bib:daley}:
+\begin{align}
+f(t, k) 
+&= \left[\prod_{i=1}^{\mathcal{N}_g(t_N)} \lambda_g^*(t_i)\right] \left[\prod_{i=1}^{\mathcal{N}_g(t_N)} f^*(k_i | t_i)\right] \exp\left(-\int_0^{t_N} \lambda_g^*(u) \, du\right).
+\label{eq:likelihood}
+\end{align}
+Here, the $\mathcal{N}_g$ is a counting process
+characterized by the \textit{ground intensity function} $\lambda ^* _g(t)$, where the mark of the events is ignored. 
+
+\subsection{Hawkes Process}
+Hawkes Process \label{bg: hp} is widely utilized for modeling point processes with self-excitatory behavior. 
+It describes a TPP, where each event triggers subsequent events. 
+Formally, the Hawkes process is defined by an intensity function $\lambda^*(t)$ as \cite{bib:hawkes}:
+\begin{equation}
+\lambda^*(t) = v + \sum_{t_i < t} \mu(t - t_i)    
+\end{equation}
+where $t$ denotes the time of interest, $v$ is a non-negative constant, $\mu(t)$ is an \textit{excitatory function} that models the impact of past events on future event rates, and $t_i$ denotes past event time points. 
+The Hawkes process has been broadly studied in machine learning \cite{bib:ANHP, bib:nhp, bib:THP, bib:sahp} with 
+practical applications \cite{hawkesInFinance, bib:onlineInteraction, bib:hawkesDocuments}.  
+
+\section{The Neural Ordinary Differential Equations}
+The Neural Ordinary Differential Equations (Neural ODEs) blends neural networks with differential equations, offering an interesting approach to deep learning \cite{bib:node} by employing continuous-depth models instead of fixed-layer architecture. 
+Mathematically, they define continuous transformations of network outputs governed by ordinary differential equations (ODEs):
+\begin{equation}
+\frac{{d\mathbf{z}(t)}}{{dt}} = \gamma(\mathbf{z}(t), t| \theta)
+\end{equation}
+where $\gamma(\cdot|\theta)$ is a neural network parameterized by $\theta$ to approximate changes of a hidden state $\mathbf{z}(t)$ with respect to time $t$. In our framework, the neural ODEs is employed to model the continuous dynamics of how each event affects the overall MTPP.

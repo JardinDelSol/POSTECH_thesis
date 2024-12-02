@@ -1,0 +1,46 @@
+Event-time data, which are found across various practical domains such as social media \cite{seismic, snapnets}, healthcare \cite{bib:RMTPP, meng2023dynamic} and stock changes \cite{Bacry2014MarketIA, hawkesInFinance}, 
+comprise timelines of events of diverse types. 
+Modeling such temporal data as a stochastic process, one seeks to predict time and type of the future events based on the history, i.e., previously observed sequential events. 
+For example, a history of purchases of a person may tell when the person will buy a new item, and a short message from a famous social media influencer could affect a critical bull or bear in a stock market. %predicting an interaction in social media, purchase of an item in an online store, occurrence of disease based on history of diagnosis, etc.
+Predicting such a future event is often realized as a chance of the event, i.e., a likelihood of the event $e$ at a specific time $t$, 
+which constitutes a probability distribution function (pdf) $f(e,t)$. 
+
+Classically, the event prediction has been handled using a Temporal Point Process (TPP), which is a stochastic process whose realization is a set of ordered time \cite{lec:tpp}. %Considering it as a random process, 
+TPP characterizes at which time point an event will occur given historical time points. 
+Hawkes Process effectively models this stochastic behavior by defining an \textit{conditional intensity function} which leverages the sum of excitation functions induced by past events called ``self-excite'' characteristics \cite{bib:hawkesOrigin,bib:hawkes}. 
+The Hawkes Process independently models the influence of each event and incorporates the entire event cases using a simple linear operation (i.e., summation) of the influences offering interpretability. % and flexibility \song{flexibility}. 
+
+While various models for TPP are adept at modeling dynamically forthcoming events, 
+they do not incorporate event-related details such as location, node-specific information (particularly when observations pertain to graphs such as multi-sensor or social networks), categorical data, and contextual information (e.g., tokens, images, or textual descriptions). 
+Marked Temporal Point Process (MTPP) addresses it 
+with ``marks'' which denotes the type of events, which elevates the traditional TPP of a univariate event to multiple marks (i.e., types) of the event. 
+Many recent approaches for the MTPP leverage combinations of the intensity function in the Hawkes Process with neural networks 
+to flexibly characterize the probability density function (pdf) of marks \cite{bib:nhp, bib:NJSDE, bib:sahp, bib:STPP, bib:ANHP}.
+This line of works includes Recurrent Marked Temporal Point Process \cite{bib:RMTPP}, Neural Hawkes Process \cite{bib:nhp} and Transformer Hawkes Process \cite{bib:THP}
+that effectively models the behavior of MTPP. 
+
+The aformentioned approaches successfully handled the complicated dependencies of intensity functions with the neural network, however, they come at the cost of interpretability of the dependencies among events. 
+Existing methods often directly estimate the probability of the event across time and marks as a whole, % instead of using the intensity function, 
+or the intensity function as a proxy is approximated without considering the dynamics of influences from various marks and time. 
+Moreover, reconstruction of the pdf of marks from the intensity function as well as other characteristic functions 
+such as survival function require several integration operations without a closed-form solution, 
+which must be re-evaluated whenever a new event is considered during inference resulting in exponential increase in computation time.
+
+In this regime, we introduce a novel decoupled MTPP framework characterized by decoupled hidden state dynamics, 
+utilizing latent continuous dynamics driven by neural ordinary differential equations (ODE), named as Dec-ODE. 
+
+The hidden state dynamic is modeled separately across each event, 
+and it explains how each event separately contributes to the overall stochastic process with high fidelity. 
+Moreover, such a decoupling approach equipped with the ODE lets our model train on the continuous dynamics of the hidden states in parallel, 
+which results in substantial decrease in computation time compared to previous approaches 
+that sequentially compute the dynamics from a series of events.
+
+The formulation of Dec-ODE leads to the contributions summarized as follows:
+\begin{itemize}
+\item We propose a novel MTPP modeling framework, i.e., Dec-ODE, which decouples individual events within a stochastic process for efficient learning and explainability of each mark, 
+\item Dec-ODE models the continuous dynamics of influences from individually decoupled events by leveraging Neural ODEs,
+\item Dec-ODE demonstrates state-of-the-art performance on various benchmarks for MTPP validation while effectively capturing inter-time dynamics with interpretability. 
+\end{itemize} 
+
+
+

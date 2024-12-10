@@ -1,0 +1,20 @@
+\section{Intensity Modeling} 
+The intensity function is widely used in TPP modeling due to its flexibility in capturing temporal distributions, with deep learning enabling the parameterization of complex processes through neural networks. 
+Early research often focused on relaxing the constraints of traditional TPPs such as the Hawkes process \cite{bib:hawkesOrigin, ISHAM1979335, bib:daley}. 
+RNN-based neural TPP models \cite{bib:nhp, bib:RMTPP} leveraged RNNs to effectively encode event sequences into a history vector. 
+Transformer-based approaches \cite{bib:THP, bib:sahp} accounted for both long-term and short-term event dependencies in $\mathcal{H}_t$. 
+The Attentive Neural Hawkes Process (ANHP) \cite{bib:ANHP} further incorporated self-attention to model complex continuous temporal dynamics by applying attention mechanisms on unobserved events. 
+In another direction, \cite{bib:nonparam} utilized Gaussian processes to relax the exponential decay assumption in the Hawkes process. 
+Additionally, \cite{bib:fully_neural} proposed using a compensator function—an integral of the intensity function—to alleviate computational challenges associated with integration in the absence of a closed form.
+
+\section{Direct Estimation of the PDF} 
+Another approach involves directly predicting the probability density function (PDF) of a TPP. 
+For instance, \cite{bib:ifl} proposed modeling the temporal distribution using a log-normal mixture. 
+The closed-form PDF provided by this method enables direct inference of key characteristics, while the mixture model offers flexible modeling capabilities. 
+Other approaches to modeling the PDF directly have incorporated popular deep learning frameworks such as GANs, normalizing flows, variational autoencoders, and meta-learning \cite{bib:exploring_generative, bib:MetaTPP}.
+
+\section{Learning Temporal Dynamics with Neural ODEs} 
+Neural ODEs, introduced in \cite{bib:node}, treat changes in the hidden vector between layers as continuous, offering a novel framework for modeling temporal dynamics. 
+Differential equation-based methods have since been applied to a range of temporal dynamic modeling tasks \cite{bib:neuralTemporalWalk, bib:counterfactualCDE, bib:SDEGames}, demonstrating advantages in handling sparse and irregular time series. 
+For instance, \cite{bib:NJSDE} used Neural ODEs to model jump stochastic differential equations and tested this on TPP modeling. 
+\cite{bib:STPP} extended this work to spatio-temporal point processes, predicting both temporal and spatial dynamics using Neural ODEs and continuous normalizing flows, and proposed a batch-wise computation algorithm for time-varying sequences.

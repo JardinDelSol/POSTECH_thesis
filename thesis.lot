@@ -3,11 +3,11 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Comparison with the state of the art methods on 5 popular real-life datasets. Results with \textbf {boldface} and \underline {underline} represent the best and the second-best results, respectively. Following \cite {bib:THP, bib:ANHP} the mean and std are gained by bootstrapping 1000 times.}}{17}{table.caption.3}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Training efficiency comparison in different datasets with the average time taken for an iteration (sec/iter) as the metric. Ratio shows that the iteration time at least reduces in half.}}{20}{table.caption.6}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Experiment on non-linear $\Phi _\lambda $. The softplus is applied after the summation in order to express inhibitory effects.}}{21}{table.caption.7}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces Estimation accuracy on the simulated Hawkes process. }}{22}{table.caption.9}%
-\contentsline {table}{\numberline {5.5}{\ignorespaces Training time (sec / epoch) compared between THP, ANHP, and Dec-ODE.}}{24}{table.caption.11}%
-\contentsline {table}{\numberline {5.6}{\ignorespaces Required memory (MB) compared between baseline methods with batch size 4.}}{24}{table.caption.12}%
-\contentsline {table}{\numberline {5.7}{\ignorespaces Statistics of benchmark datasets used for comparisons.}}{28}{table.caption.13}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Comparison with the state of the art methods on 5 popular real-life datasets. Results with \textbf {boldface} and \underline {underline} represent the best and the second-best results, respectively. Following \cite {bib:THP, bib:ANHP} the mean and std are gained by bootstrapping 1000 times.}}{15}{table.caption.3}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Training efficiency comparison in different datasets with the average time taken for an iteration (sec/iter) as the metric. Ratio shows that the iteration time at least reduces in half.}}{18}{table.caption.6}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Experiment on non-linear $\Phi _\lambda $. The softplus is applied after the summation in order to express inhibitory effects.}}{19}{table.caption.7}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Estimation accuracy on the simulated Hawkes process. }}{22}{table.caption.10}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Training time (sec / epoch) compared between THP, ANHP, and Dec-ODE.}}{22}{table.caption.11}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces Required memory (MB) compared between baseline methods with batch size 4.}}{23}{table.caption.12}%
+\contentsline {table}{\numberline {5.7}{\ignorespaces Statistics of benchmark datasets used for comparisons.}}{27}{table.caption.13}%
 \addvspace {10\p@ }

@@ -1,0 +1,32 @@
+Event-time data, ubiquitous across domains like social media \cite{seismic, snapnets}, healthcare \cite{bib:RMTPP, meng2023dynamic}, and stock market trends \cite{Bacry2014MarketIA, hawkesInFinance}, 
+consist of sequences of events occurring at specific times and often categorized by type. 
+To model such temporal data as a stochastic process, the goal is to predict the time and type of future events based on prior observations, i.e., the history of the sequence. 
+For instance, analyzing a person’s purchase history may help forecast when they will make their next purchase, while a brief post from an influential figure on social media could trigger significant movements in stock prices. 
+This prediction often translates to estimating the likelihood of an event $e$ occurring at time $t$, represented as a probability density function (pdf) $f(e, t)$. 
+
+Temporal Point Processes (TPP) have traditionally been used for such event predictions, where a realization of the stochastic process is a sequence of ordered time points \cite{lec:tpp}. 
+By treating the event times as random variables, TPPs model the occurrence times of events based on past timestamps. 
+The Hawkes Process, a well-known TPP model, captures these dynamics by employing a \textit{conditional intensity function} that aggregates excitation effects from past events, a characteristic known as ``self-excitation'' \cite{bib:hawkesOrigin,bib:hawkes}. 
+This framework independently models the influence of each event and combines them using a simple summation, making it both interpretable and computationally efficient. 
+
+Although many TPP-based models effectively handle the dynamic prediction of future events, 
+they often overlook details such as spatial information, node-specific attributes (particularly in graph-based contexts like social or sensor networks), and additional context such as text, tokens, or images. 
+Marked Temporal Point Processes (MTPP) address this limitation by introducing ``marks,'' which represent event types, extending the traditional univariate TPP to account for multivariate event types. 
+Recent MTPP approaches frequently combine the intensity functions of Hawkes Processes with neural networks to flexibly model the pdfs of marks \cite{bib:nhp, bib:NJSDE, bib:sahp, bib:STPP, bib:ANHP}. 
+Prominent examples include Recurrent Marked Temporal Point Process \cite{bib:RMTPP}, Neural Hawkes Process \cite{bib:nhp}, and Transformer Hawkes Process \cite{bib:THP}, which effectively capture MTPP dynamics. 
+
+While these models excel at capturing complex dependencies, they often sacrifice interpretability of the relationships between events. 
+Many existing approaches either directly estimate the joint probability distribution over time and marks, or use a proxy intensity function that does not fully capture the dynamic interaction between different marks and timestamps. 
+Additionally, reconstructing the mark pdf or other related functions like the survival function typically involves complex integrations without closed-form solutions, requiring re-computation for each new event during inference. This results in computational inefficiencies, often scaling exponentially with the number of events.
+
+In this context, we introduce a novel framework for MTPP modeling called Dec-ODE, characterized by decoupled hidden state dynamics and driven by latent continuous dynamics via neural ordinary differential equations (ODEs). 
+
+Dec-ODE decouples the hidden state dynamics for each event, allowing the model to independently quantify each event’s contribution to the overall stochastic process with high fidelity. 
+Moreover, this decoupling leverages ODEs to enable parallel training of continuous hidden state dynamics, significantly reducing computational overhead compared to sequential approaches that rely on step-by-step event updates.
+
+Our Dec-ODE formulation offers the following contributions:
+\begin{itemize}
+\item We propose a novel MTPP framework, Dec-ODE, which decouples the contributions of individual events to enhance interpretability.
+\item Dec-ODE models continuous latent dynamics using Neural ODEs to capture the individual and collective influences of events.
+\item Dec-ODE achieves state-of-the-art results on multiple MTPP benchmarks while providing interpretable insights into temporal dynamics.
+\end{itemize}

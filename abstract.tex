@@ -1,10 +1,10 @@
-A Marked Temporal Point Process (MTPP) is a stochastic process whose realization is a set of event-time data. 
-MTPP is often used to understand complex dynamics of asynchronous temporal events such as money transaction, social media, healthcare, etc. 
-Recent studies have utilized deep neural networks to capture complex temporal dependencies of events and generate embeddings that aptly represent the observed events. 
-While most previous studies focus on the inter-event dependencies and their representations,
-how individual events influence the overall dynamics over time has been under-explored. 
-In this regime, we propose a Decoupled MTPP framework that disentangles characterization of a stochastic process into a set of evolving influences from different events. 
-Our approach employs Neural Ordinary Differential Equations (Neural ODEs) \cite{bib:node} to learn flexible continuous dynamics of these influences while simultaneously addressing multiple inference problems, 
-such as density estimation and survival rate computation. 
-We emphasize the significance of disentangling the influences by comparing our framework with state-of-the-art methods on real-life datasets, 
-and provide analysis on the model behavior for potential applications.
+A Marked Temporal Point Process (MTPP) is a type of stochastic process, where its realization is a set of event-time data. 
+MTPP is often used to analyze complex dynamics of discrete temporal events such as money transaction, social media, healthcare, etc. 
+Recent studies have incorporated various deep neural networks to capture complex dependencies between events and generate embeddings that effectively represent the observed events. 
+While most of existing research focuses on modeling inter-event dependencies and their representations, the influence of individual events on the overall temporal dynamics has received less attention.
+To address this gap, we introduce a Decoupled MTPP framework that separates the characterization of the stochastic process into a series of 
+evolving influences from individual events. 
+Our method uses Neural Ordinary Differential Equations (Neural ODEs) to learn the continuous dynamics of these influences flexibly, 
+while simultaneously solving multiple inference tasks.
+We demonstrate the importance of disentangling these influences by comparing our framework with state-of-the-art techniques on real-world datasets.
+We also provide analysis of the model's behavior, highlighting its potential applications.

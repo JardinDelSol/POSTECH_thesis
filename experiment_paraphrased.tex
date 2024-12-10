@@ -22,8 +22,8 @@ We employed three conventional metrics for evaluation:
 For predictions, the expected value $\mathbb{E}_{f^*}[t]$ was used as the predicted time of the next event, and the mark with the highest probability at time $t$, i.e., $\argmax(f^*(k|t))$, was selected as the predicted mark.  
 
 \textbf{Baseline.}  
-We compared our method against three state-of-the-art approaches:  
-Transformer Hawkes Process (THP) \cite{bib:THP}, Intensity-Free Learning (IFL) \cite{bib:ifl}, and Attentive Neural Hawkes Process (ANHP) \cite{bib:ANHP}.  
+We compared our method against four state-of-the-art approaches:  
+Recurrent Marked Temporal Point Process (RMTPP) \cite{bib:RMTPP}, Transformer Hawkes Process (THP) \cite{bib:THP}, Intensity-Free Learning (IFL) \cite{bib:ifl}, and Attentive Neural Hawkes Process (ANHP) \cite{bib:ANHP}.  
 Both THP and ANHP are transformer-based models that utilize the full set of observed events $\mathcal{H}_{t_n}$ to predict $e_{n+1}$.  
 IFL directly models $f^*(t,k) = f^*(t) f^*(k|t)$ using a log-normal mixture for a more flexible distribution.  
 As it explicitly parameterizes the distribution $f^*(t)$, the expected value $\mathbb{E}_{f^*}[t]$ can be computed analytically.  
@@ -84,7 +84,7 @@ Additional implementation details are provided in Sec.\ref{sec:baselineImplement
 We evaluate the performance of linear Dec-ODE against state-of-the-art TPP methods using the five real-world datasets described in Sec. \ref{sec:setup}. A summary of the results is provided in Table \ref{table: real-life}.  
 Overall, our approach achieved results that were comparable to or better than the baselines across all metrics.  
 This demonstrates that Dec-ODE effectively captures the complex dynamics of MTPPs through independently propagated influence functions.  
-Notably, Dec-ODE excelled in prediction tasks, as evidenced by its high accuracy and low RMSE, while ANHP slightly outperformed it in NLL. Additionally, methods like Dec-ODE and IFL, which estimate $f^*(t)$ to compute $\mathbb{E}[t]$, tended to predict event times more accurately.  
+Notably, Dec-ODE excelled in prediction tasks, as evidenced by its low RMSE, while ANHP slightly outperformed it in NLL. Additionally, methods like Dec-ODE and IFL, which estimate $f^*(t)$ to compute $\mathbb{E}[t]$, tended to predict event times more accurately.  
 
 \textbf{Discussion.}  
 To ensure a fair comparison, we increased the number of samples used in the thinning algorithm \cite{lec:thinning, bib:thinning_ogata} implemented by \cite{bib:ANHP}. In most cases, the sample count was increased by a factor of 20. However, on the Reddit dataset with THP, the thinning algorithm struggled to sample correctly from $f^*(t)$ due to the low magnitude and high fluctuation of the intensity function. Additional details are provided in Sec.\ref{appen: thinning}.

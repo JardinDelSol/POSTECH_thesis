@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex thesis"] 1733130391.06937 "thesis.aux" "thesis.bbl" "thesis" 1733475709.44743 0
+["bibtex thesis"] 1733812353.72583 "thesis.aux" "thesis.bbl" "thesis" 1733812377.14033 0
   "./mybib.bib" 1731048128.05519 10574 0f5225dfb36e56adf9a64c55af777eb7 ""
   "/usr/local/texlive/2024/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "thesis.aux" 1733475708.52253 23084 55563dee6592bc309c0d3b1704d607f8 "pdflatex"
+  "thesis.aux" 1733812376.58005 23112 ace43c39989a568b75cec4685fdd3dc6 "pdflatex"
   (generated)
   "thesis.bbl"
   "thesis.blg"
   (rewritten before read)
-["pdflatex"] 1733475705.82787 "/Users/yujees/Documents/Fall2024/POSTECH_thesis/thesis.tex" "thesis.pdf" "thesis" 1733475709.44782 0
-  "/Users/yujees/Documents/Fall2024/POSTECH_thesis/thesis.tex" 1733475705.57566 13189 5c877e1e05095dce6986d93efb2d2fdc ""
+["pdflatex"] 1733812374.97286 "/Users/yujees/Documents/Fall2024/POSTECH_thesis/thesis.tex" "thesis.pdf" "thesis" 1733812377.1405 0
+  "/Users/yujees/Documents/Fall2024/POSTECH_thesis/thesis.tex" 1733810379.44626 14247 d322c1fb60786d4ebdb68e4a3a4d371e ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -65,6 +65,7 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmac.tfm" 1364599308 1244 3e75f0068313f0d2b3560a3bb9eebc26 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmad.tfm" 1364599308 1256 e1106cf286f84f721ca2eae38205e2b2 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmae.tfm" 1364599308 1252 8a3ed5f3f1621f7431b8ccd200a2b40e ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmaf.tfm" 1364599308 1276 a8e772fdf4ca3f58986b6f5d8f5fa749 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmb0.tfm" 1364599308 1256 6cf60c9a1a1a53611681993c467fa8d2 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmb1.tfm" 1364599308 1260 ac3ec70aecb4d199467c5bf395d166f2 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmb2.tfm" 1364599308 1256 7757d222cf34de9d71f72d148037b691 ""
@@ -127,6 +128,7 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmac.pfb" 1364599308 141266 9f37e78b9ed18fefeb805b93d962c49b ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmad.pfb" 1364599308 162029 6555f92ce72bc742a5ae0cc5b3daca4e ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmae.pfb" 1364599308 151218 e459b242e186c87dffde79fcc66d664a ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmaf.pfb" 1364599308 186131 6767105e15919bd42e10561070e6a73c ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb0.pfb" 1364599308 158001 20c5f167a06cd11212d2a5ff3150731d ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb1.pfb" 1364599308 157088 b25d92c06972fb937873c8c9914c7a31 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb2.pfb" 1364599308 160311 56d27ef39816a0f9cd1af8e6beed4ceb ""
@@ -281,7 +283,7 @@
   "abstract.tex" 1733107787.28712 1253 4a5398d0abb7bf57e46fcf09ae9be26d ""
   "background_paraphrased.tex" 1733110031.58209 4806 93b5876a79d59ab14982b0ea25bc53df ""
   "conclusion_paraphrased.tex" 1733115653.6094 751 758d7a22bc0d029764edceb2eb4449d5 ""
-  "experiment_paraphrased.tex" 1733130310.93022 34860 46935167ad35e6c8ff1db561c6e8fb62 ""
+  "experiment_paraphrased.tex" 1733812374.7391 34907 ba0cf672ced6a86e42a335260e9d433f ""
   "figure/SO_int.png" 1731051337.9448 50665 335f7a704f81ca6c0133c24e911f9987 ""
   "figure/decoupled_intensity4.png" 1731051337.83724 38709 996bf1936faef0b4382bf0828da3c8d5 ""
   "figure/eq_9_figure2.png" 1731049924.04763 175803 a172bb34e134e9498ead1f0e7c896dda ""
@@ -300,17 +302,17 @@
   "figure/total_intensity2.png" 1731051337.97262 43949 042f4c5f7cac85ab8136677e2813747b ""
   "figure/total_intensity3.png" 1731051337.98477 47804 52dbaf30e6c08877a5ffb9ce7cb8dbd1 ""
   "figure/total_intensity4.png" 1731051337.98889 51669 2fb6f2cc0cf8bc06d34b10de914e5a59 ""
-  "introduction_paraphrased.tex" 1733109598.86463 4348 d954703d863f6810ea89a2c529a8eaaa ""
+  "introduction_paraphrased.tex" 1733810890.15965 4376 a344d9e7d972fa1e4be4d876bdf841ce ""
   "method_paraphrased.tex" 1733128478.56167 10792 25e2e514e764f942d5c7a44dbdba69b8 ""
   "postech-ucs.cls" 1731043220.09718 45098 3753851e656ab9f9aa4e285119464e3b ""
   "relatedworks_parapharsed.tex" 1733113269.71784 2676 00607b62d5b958f4fdd3392becec99f8 ""
   "summarykorean.tex" 1731471746.95882 3526 dde6388579376ee6482c136d0265fc5e ""
-  "thesis.aux" 1733475708.52253 23084 55563dee6592bc309c0d3b1704d607f8 "pdflatex"
-  "thesis.bbl" 1733130391.15793 6727 bbf070f0cd1d0065202b46133230114c "bibtex thesis"
-  "thesis.lof" 1733475708.52589 4450 348aefb035fb5e2b583c07b1899cf82b "pdflatex"
-  "thesis.lot" 1733475708.52584 1527 55bda7193ffe105803dd96611613f852 "pdflatex"
-  "thesis.tex" 1733475705.57566 13189 5c877e1e05095dce6986d93efb2d2fdc ""
-  "thesis.toc" 1733475708.52577 3974 1d6f2ceeb9b0dc2b4b008cb11efeefa7 "pdflatex"
+  "thesis.aux" 1733812376.58005 23112 ace43c39989a568b75cec4685fdd3dc6 "pdflatex"
+  "thesis.bbl" 1733812353.81514 6727 bbf070f0cd1d0065202b46133230114c "bibtex thesis"
+  "thesis.lof" 1733812376.58201 4451 3772e9dd50528fda530f8fb802d8fbae "pdflatex"
+  "thesis.lot" 1733812376.58198 1527 04844331ece88b2b7a6483dcf83762e9 "pdflatex"
+  "thesis.tex" 1733810379.44626 14247 d322c1fb60786d4ebdb68e4a3a4d371e ""
+  "thesis.toc" 1733812376.58192 3977 135b68a43b1a721d64beaeba58da981a "pdflatex"
   (generated)
   "thesis.aux"
   "thesis.lof"

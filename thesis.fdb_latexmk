@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex thesis"] 1733812353.72583 "thesis.aux" "thesis.bbl" "thesis" 1733812377.14033 0
+["bibtex thesis"] 1734332317.02542 "thesis.aux" "thesis.bbl" "thesis" 1734332369.23075 0
   "./mybib.bib" 1731048128.05519 10574 0f5225dfb36e56adf9a64c55af777eb7 ""
   "/usr/local/texlive/2024/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "thesis.aux" 1733812376.58005 23112 ace43c39989a568b75cec4685fdd3dc6 "pdflatex"
+  "thesis.aux" 1734332368.67852 23112 ace43c39989a568b75cec4685fdd3dc6 "pdflatex"
   (generated)
   "thesis.bbl"
   "thesis.blg"
   (rewritten before read)
-["pdflatex"] 1733812374.97286 "/Users/yujees/Documents/Fall2024/POSTECH_thesis/thesis.tex" "thesis.pdf" "thesis" 1733812377.1405 0
-  "/Users/yujees/Documents/Fall2024/POSTECH_thesis/thesis.tex" 1733810379.44626 14247 d322c1fb60786d4ebdb68e4a3a4d371e ""
+["pdflatex"] 1734332367.12614 "/Users/yujees/Documents/Fall2024/POSTECH_thesis/thesis.tex" "thesis.pdf" "thesis" 1734332369.23093 0
+  "/Users/yujees/Documents/Fall2024/POSTECH_thesis/thesis.tex" 1733815470.85064 11117 b747ebe45b747b1a7fc3e022c47aa71f ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -281,6 +281,7 @@
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1731046862 8221429 7fd7a4463d1b48bbaa06a7d3f6b46bbf ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
   "abstract.tex" 1733107787.28712 1253 4a5398d0abb7bf57e46fcf09ae9be26d ""
+  "acknowledgement.tex" 1734332366.91007 4680 c4fb63c8422f279a137dd4138d7d1aa3 ""
   "background_paraphrased.tex" 1733110031.58209 4806 93b5876a79d59ab14982b0ea25bc53df ""
   "conclusion_paraphrased.tex" 1733115653.6094 751 758d7a22bc0d029764edceb2eb4449d5 ""
   "experiment_paraphrased.tex" 1733812374.7391 34907 ba0cf672ced6a86e42a335260e9d433f ""
@@ -307,12 +308,12 @@
   "postech-ucs.cls" 1731043220.09718 45098 3753851e656ab9f9aa4e285119464e3b ""
   "relatedworks_parapharsed.tex" 1733113269.71784 2676 00607b62d5b958f4fdd3392becec99f8 ""
   "summarykorean.tex" 1731471746.95882 3526 dde6388579376ee6482c136d0265fc5e ""
-  "thesis.aux" 1733812376.58005 23112 ace43c39989a568b75cec4685fdd3dc6 "pdflatex"
-  "thesis.bbl" 1733812353.81514 6727 bbf070f0cd1d0065202b46133230114c "bibtex thesis"
-  "thesis.lof" 1733812376.58201 4451 3772e9dd50528fda530f8fb802d8fbae "pdflatex"
-  "thesis.lot" 1733812376.58198 1527 04844331ece88b2b7a6483dcf83762e9 "pdflatex"
-  "thesis.tex" 1733810379.44626 14247 d322c1fb60786d4ebdb68e4a3a4d371e ""
-  "thesis.toc" 1733812376.58192 3977 135b68a43b1a721d64beaeba58da981a "pdflatex"
+  "thesis.aux" 1734332368.67852 23112 ace43c39989a568b75cec4685fdd3dc6 "pdflatex"
+  "thesis.bbl" 1734332317.11299 6727 bbf070f0cd1d0065202b46133230114c "bibtex thesis"
+  "thesis.lof" 1734332368.68048 4451 3772e9dd50528fda530f8fb802d8fbae "pdflatex"
+  "thesis.lot" 1734332368.68046 1527 04844331ece88b2b7a6483dcf83762e9 "pdflatex"
+  "thesis.tex" 1733815470.85064 11117 b747ebe45b747b1a7fc3e022c47aa71f ""
+  "thesis.toc" 1734332368.68043 3977 135b68a43b1a721d64beaeba58da981a "pdflatex"
   (generated)
   "thesis.aux"
   "thesis.lof"

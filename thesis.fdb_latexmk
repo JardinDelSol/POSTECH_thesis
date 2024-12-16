@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex thesis"] 1734332317.02542 "thesis.aux" "thesis.bbl" "thesis" 1734332369.23075 0
+["bibtex thesis"] 1734332317.02542 "thesis.aux" "thesis.bbl" "thesis" 1734333625.45713 0
   "./mybib.bib" 1731048128.05519 10574 0f5225dfb36e56adf9a64c55af777eb7 ""
   "/usr/local/texlive/2024/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "thesis.aux" 1734332368.67852 23112 ace43c39989a568b75cec4685fdd3dc6 "pdflatex"
+  "thesis.aux" 1734333624.87096 23112 ace43c39989a568b75cec4685fdd3dc6 "pdflatex"
   (generated)
   "thesis.bbl"
   "thesis.blg"
   (rewritten before read)
-["pdflatex"] 1734332367.12614 "/Users/yujees/Documents/Fall2024/POSTECH_thesis/thesis.tex" "thesis.pdf" "thesis" 1734332369.23093 0
-  "/Users/yujees/Documents/Fall2024/POSTECH_thesis/thesis.tex" 1733815470.85064 11117 b747ebe45b747b1a7fc3e022c47aa71f ""
+["pdflatex"] 1734333623.24578 "/Users/yujees/Documents/Fall2024/POSTECH_thesis/thesis.tex" "thesis.pdf" "thesis" 1734333625.4573 0
+  "/Users/yujees/Documents/Fall2024/POSTECH_thesis/thesis.tex" 1734333622.98693 11117 b747ebe45b747b1a7fc3e022c47aa71f ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -308,12 +308,12 @@
   "postech-ucs.cls" 1731043220.09718 45098 3753851e656ab9f9aa4e285119464e3b ""
   "relatedworks_parapharsed.tex" 1733113269.71784 2676 00607b62d5b958f4fdd3392becec99f8 ""
   "summarykorean.tex" 1731471746.95882 3526 dde6388579376ee6482c136d0265fc5e ""
-  "thesis.aux" 1734332368.67852 23112 ace43c39989a568b75cec4685fdd3dc6 "pdflatex"
+  "thesis.aux" 1734333624.87096 23112 ace43c39989a568b75cec4685fdd3dc6 "pdflatex"
   "thesis.bbl" 1734332317.11299 6727 bbf070f0cd1d0065202b46133230114c "bibtex thesis"
-  "thesis.lof" 1734332368.68048 4451 3772e9dd50528fda530f8fb802d8fbae "pdflatex"
-  "thesis.lot" 1734332368.68046 1527 04844331ece88b2b7a6483dcf83762e9 "pdflatex"
-  "thesis.tex" 1733815470.85064 11117 b747ebe45b747b1a7fc3e022c47aa71f ""
-  "thesis.toc" 1734332368.68043 3977 135b68a43b1a721d64beaeba58da981a "pdflatex"
+  "thesis.lof" 1734333624.8732 4451 3772e9dd50528fda530f8fb802d8fbae "pdflatex"
+  "thesis.lot" 1734333624.87316 1527 04844331ece88b2b7a6483dcf83762e9 "pdflatex"
+  "thesis.tex" 1734333622.98693 11117 b747ebe45b747b1a7fc3e022c47aa71f ""
+  "thesis.toc" 1734333624.8731 3977 135b68a43b1a721d64beaeba58da981a "pdflatex"
   (generated)
   "thesis.aux"
   "thesis.lof"

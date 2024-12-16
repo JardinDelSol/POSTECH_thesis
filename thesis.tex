@@ -69,6 +69,7 @@
 \usepackage{makecell}
 \usepackage{placeins}
 \usepackage{subcaption}
+\usepackage{pdfpages}
 
 % \usepackage{bbm}
 % \renewcommand{\thealgorithm}{}
@@ -107,7 +108,7 @@
 % @usage   \advisor[options]{...한글이름...}{...영문이름...}{signed|nosign}
 % @options [default: major]
 % - major: 주 지도교수  | coopr: 공동 지도교수
-\advisor[major]{김 원 화}{Won Hwa Kim}{nosign}
+\advisor[major]{김 원 화}{Won Hwa Kim}{signed}
 %
 % 지도교수 한글이름은 입력하지 않아도 됩니다.
 % You may not input advisor's korean name
@@ -173,6 +174,8 @@
     % 앞표지, 속표지, 학위논문 제출승인서, 학위논문 심사완료 검인서는
     % 클래스 옵션을 final로 지정해주면 자동으로 생성되며,
     % 반대로 옵션을 draft로 지정해주면 생성되지 않습니다.
+    \includepdf[pages={1},scale=1.0,offset=-0.cm 0cm]{advisor_sign.pdf}
+    \includepdf[pages={1},scale=1.0,offset=-0.1cm 0cm]{signed_com.pdf}
 
     % 영문초록 (abstract)
     \begin{abstract}
@@ -246,13 +249,7 @@
 % - korean : 한글타이틀 | english : 영문타이틀
 
 \acknowledgement[korean]
-% 느낀점 배운점
 \input{acknowledgement.tex}
-% 카우인 친구들에게도 감사합니다.
-% 민정 - 학부때의 좋은 인연을 이어나갈 수 있어서 정말 좋았습니다. 입시 준비부터 졸업까지 큰 응원과 도움을 받았습니다.
-% 효민 - 새로운 환경에서 생활을 시작하며 백그라운드를 아는 사람이 근처에 있다는 것에 큰 위안을 얻었습니다.
-% 나혁 - 성실하고 꼼꼼한 모습 보며 많이 배울 수 있었습니다.
-
 
 %%때로는 엄하고 때로는 부드러운 모습으로 지도 해주신 한준희 교수님, 감사드립니다.
 %%

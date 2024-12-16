@@ -107,7 +107,7 @@
     \checkparameters                        % 문서 변수가 올바른지 점검
     \if@isFinal                             % final 옵션이 지정되어 있으면
         \makefrontcover \maketitle         % 앞표지, 속표지 생성
-        \makeapproval                      % 제출승인서, 심사완료검인 생성
+        % \makeapproval                      % 제출승인서, 심사완료검인 생성
     \else \fi }
 \AtEndDocument{}                             % \end{document}와 함께 실행
 
